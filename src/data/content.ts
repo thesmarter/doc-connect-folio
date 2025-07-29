@@ -5,6 +5,7 @@ export const content = {
       about: 'نبذة',
       experience: 'الخبرات',
       services: 'الخدمات',
+      testimonials: 'آراء العملاء',
       contact: 'اتصل بنا'
     },
     hero: {
@@ -90,6 +91,47 @@ export const content = {
         }
       ]
     },
+    testimonials: {
+      title: 'آراء عملائنا',
+      subtitle: 'تجارب حقيقية من مرضانا الكرام',
+      list: [
+        {
+          name: 'محمد أحمد',
+          condition: 'مريض قلب',
+          rating: 5,
+          comment: 'تجربة ممتازة مع الدكتور أحمد. أسلوبه في التعامل مهني جداً والتشخيص كان دقيق. أنصح بشدة بزيارته.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'فاطمة سالم',
+          condition: 'متابعة السكري',
+          rating: 5,
+          comment: 'الدكتور أحمد ساعدني كثيراً في السيطرة على مرض السكري. الخطة العلاجية واضحة والنتائج ممتازة.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'عبدالله محمد',
+          condition: 'فحص شامل',
+          rating: 5,
+          comment: 'فحص شامل ودقيق، والدكتور يشرح كل شيء بوضوح. العيادة منظمة والطاقم محترف.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'نورا علي',
+          condition: 'استشارة طبية',
+          rating: 5,
+          comment: 'استشارة مفيدة جداً، الدكتور يستمع بعناية ويقدم نصائح قيمة. أشعر بتحسن كبير بعد المتابعة معه.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'سعد الغامدي',
+          condition: 'علاج ضغط الدم',
+          rating: 5,
+          comment: 'تعامل راقي ومهني. الدكتور أحمد خبير في مجاله وساعدني في التحكم بضغط الدم بطريقة فعالة.',
+          image: '/api/placeholder/60/60'
+        }
+      ]
+    },
     contact: {
       title: 'تواصل معنا',
       subtitle: 'نحن هنا لخدمتكم - تواصلوا معنا في أي وقت',
@@ -120,6 +162,7 @@ export const content = {
       about: 'About',
       experience: 'Experience',
       services: 'Services',
+      testimonials: 'Testimonials',
       contact: 'Contact'
     },
     hero: {
@@ -202,6 +245,47 @@ export const content = {
           title: 'Emergency Services',
           description: '24/7 emergency services for urgent cases',
           icon: '🚨'
+        }
+      ]
+    },
+    testimonials: {
+      title: 'What Our Patients Say',
+      subtitle: 'Real experiences from our valued patients',
+      list: [
+        {
+          name: 'Mohammed Ahmed',
+          condition: 'Cardiac Patient',
+          rating: 5,
+          comment: 'Excellent experience with Dr. Ahmed. His approach is very professional and the diagnosis was accurate. Highly recommend visiting him.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'Fatima Salem',
+          condition: 'Diabetes Follow-up',
+          rating: 5,
+          comment: 'Dr. Ahmed helped me a lot in controlling my diabetes. The treatment plan is clear and the results are excellent.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'Abdullah Mohammed',
+          condition: 'Comprehensive Checkup',
+          rating: 5,
+          comment: 'Comprehensive and accurate examination, the doctor explains everything clearly. The clinic is organized and the staff is professional.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'Nora Ali',
+          condition: 'Medical Consultation',
+          rating: 5,
+          comment: 'Very helpful consultation, the doctor listens carefully and provides valuable advice. I feel much better after following up with him.',
+          image: '/api/placeholder/60/60'
+        },
+        {
+          name: 'Saad Al-Ghamdi',
+          condition: 'Hypertension Treatment',
+          rating: 5,
+          comment: 'Elegant and professional treatment. Dr. Ahmed is an expert in his field and helped me control blood pressure effectively.',
+          image: '/api/placeholder/60/60'
         }
       ]
     },

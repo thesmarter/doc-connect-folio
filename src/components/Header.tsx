@@ -13,6 +13,7 @@ export const Header = () => {
     { label: t.nav.home, href: '#home' },
     { label: t.nav.about, href: '#experience' },
     { label: t.nav.services, href: '#services' },
+    { label: t.nav.testimonials, href: '#testimonials' },
     { label: t.nav.contact, href: '#contact' }
   ];
 
