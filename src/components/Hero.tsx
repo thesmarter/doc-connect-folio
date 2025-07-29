@@ -18,7 +18,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-background to-primary-light/10">
+    <section id="home" className="min-h-screen flex items-center pt-24 bg-gradient-to-br from-background to-primary-light/10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
