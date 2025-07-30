@@ -1,26 +1,37 @@
 import { useState } from 'react';
 import { Menu, X, Stethoscope } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { LanguageToggle } from './LanguageToggle';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = useLanguage();
   const t = content[language];
+  const location = useLocation();
 
   const navItems = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.about, href: '#experience' },
-    { label: t.nav.services, href: '#services' },
-    { label: t.nav.testimonials, href: '#testimonials' },
-    { label: t.nav.contact, href: '#contact' }
+    { label: t.nav.home, href: '#home', type: 'scroll' },
+    { label: t.nav.about, href: '#experience', type: 'scroll' },
+    { label: t.nav.services, href: '#services', type: 'scroll' },
+    { label: t.nav.testimonials, href: '#testimonials', type: 'scroll' },
+    { label: t.nav.contact, href: '#contact', type: 'scroll' },
+    { label: t.nav.blog, href: '/blog', type: 'link' }
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (item: typeof navItems[0]) => {
+    if (item.type === 'scroll') {
+      // Only scroll if we're on the home page
+      if (location.pathname === '/') {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Navigate to home page with hash
+        window.location.href = `/${item.href}`;
+      }
     }
     setIsMenuOpen(false);
   };
@@ -43,13 +54,23 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
-              >
-                {item.label}
-              </button>
+              item.type === 'link' ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavClick(item)}
+                  className="text-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </nav>
 
@@ -72,13 +93,24 @@ export const Header = () => {
           <nav className="md:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {item.label}
-                </button>
+                item.type === 'link' ? (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.href}
+                    onClick={() => handleNavClick(item)}
+                    className="text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+                  >
+                    {item.label}
+                  </button>
+                )
               ))}
             </div>
           </nav>

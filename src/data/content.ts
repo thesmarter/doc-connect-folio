@@ -6,7 +6,8 @@ export const content = {
       experience: 'الخبرات',
       services: 'الخدمات',
       testimonials: 'آراء العملاء',
-      contact: 'اتصل بنا'
+      contact: 'اتصل بنا',
+      blog: 'المدونة'
     },
     hero: {
       title: 'د. أحمد محمد علي',
@@ -151,9 +152,51 @@ export const content = {
       }
     },
     footer: {
-      rights: 'جميع الحقوق محفوظة © 2024 د. أحمد محمد علي',
+      rights: 'جميع الحقوق محفوظة © 2025 د. أحمد محمد علي',
       privacy: 'سياسة الخصوصية',
       terms: 'الشروط والأحكام'
+    },
+    common: {
+      // Toast messages
+      fillAllFields: 'يرجى ملء جميع الحقول',
+      messageSent: 'تم إرسال الرسالة',
+      // Stats text
+      happyPatients: 'مريض راضي',
+      yearsExperience: 'سنة خبرة',
+      satisfactionRate: 'نسبة الرضا',
+      medicalSupport: 'دعم طبي',
+      awards: 'جائزة',
+      // Call to action
+      joinPatients: 'انضم إلى آلاف المرضى الراضين عن خدماتنا',
+      bookNow: 'احجز موعدك الآن',
+      // Quick links
+      quickLinks: 'روابط سريعة'
+    },
+    notFound: {
+      title: '404',
+      message: 'عذراً! الصفحة غير موجودة',
+      returnHome: 'العودة للرئيسية'
+    },
+    blog: {
+      title: 'المدونة الطبية',
+      subtitle: 'مقالات ونصائح طبية من خبرائنا',
+      recentPosts: 'أحدث المقالات',
+      readMore: 'اقرأ المزيد',
+      backToBlog: 'العودة للمدونة',
+      publishedOn: 'نُشر في',
+      updatedOn: 'آخر تحديث',
+      author: 'الكاتب',
+      category: 'التصنيف',
+      tags: 'الكلمات المفتاحية',
+      relatedPosts: 'مقالات ذات صلة',
+      noPostsFound: 'لا توجد مقالات',
+      loadMore: 'تحميل المزيد',
+      searchPlaceholder: 'ابحث في المقالات...',
+      allCategories: 'جميع التصنيفات',
+      page: 'صفحة',
+      of: 'من',
+      previous: 'السابق',
+      next: 'التالي'
     }
   },
   en: {
@@ -163,7 +206,8 @@ export const content = {
       experience: 'Experience',
       services: 'Services',
       testimonials: 'Testimonials',
-      contact: 'Contact'
+      contact: 'Contact',
+      blog: 'Blog'
     },
     hero: {
       title: 'Dr. Ahmed Mohammed Ali',
@@ -308,9 +352,51 @@ export const content = {
       }
     },
     footer: {
-      rights: 'All rights reserved © 2024 Dr. Ahmed Mohammed Ali',
+      rights: 'All rights reserved © 2025 Dr. Ahmed Mohammed Ali',
       privacy: 'Privacy Policy',
       terms: 'Terms & Conditions'
+    },
+    common: {
+      // Toast messages
+      fillAllFields: 'Please fill all fields',
+      messageSent: 'Message sent successfully',
+      // Stats text
+      happyPatients: 'Happy Patients',
+      yearsExperience: 'Years Experience',
+      satisfactionRate: 'Satisfaction Rate',
+      medicalSupport: 'Medical Support',
+      awards: 'Awards',
+      // Call to action
+      joinPatients: 'Join thousands of satisfied patients who trust our services',
+      bookNow: 'Book Your Appointment Now',
+      // Quick links
+      quickLinks: 'Quick Links'
+    },
+    notFound: {
+      title: '404',
+      message: 'Oops! Page not found',
+      returnHome: 'Return to Home'
+    },
+    blog: {
+      title: 'Medical Blog',
+      subtitle: 'Articles and medical tips from our experts',
+      recentPosts: 'Recent Posts',
+      readMore: 'Read More',
+      backToBlog: 'Back to Blog',
+      publishedOn: 'Published on',
+      updatedOn: 'Last updated',
+      author: 'Author',
+      category: 'Category',
+      tags: 'Tags',
+      relatedPosts: 'Related Posts',
+      noPostsFound: 'No posts found',
+      loadMore: 'Load More',
+      searchPlaceholder: 'Search articles...',
+      allCategories: 'All Categories',
+      page: 'Page',
+      of: 'of',
+      previous: 'Previous',
+      next: 'Next'
     }
   }
 };

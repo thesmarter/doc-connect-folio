@@ -1,4 +1,4 @@
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import consultationImg from '@/assets/consultation.jpg';
 

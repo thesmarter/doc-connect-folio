@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 
 export const Testimonials = () => {
@@ -134,25 +134,25 @@ export const Testimonials = () => {
           <div className="text-center">
             <p className="text-3xl font-bold text-primary mb-2">5000+</p>
             <p className="text-muted-foreground">
-              {language === 'ar' ? 'مريض راضي' : 'Happy Patients'}
+              {t.common.happyPatients}
             </p>
           </div>
           <div className="text-center">
             <p className="text-3xl font-bold text-primary mb-2">15+</p>
             <p className="text-muted-foreground">
-              {language === 'ar' ? 'سنة خبرة' : 'Years Experience'}
+              {t.common.yearsExperience}
             </p>
           </div>
           <div className="text-center">
             <p className="text-3xl font-bold text-primary mb-2">98%</p>
             <p className="text-muted-foreground">
-              {language === 'ar' ? 'نسبة الرضا' : 'Satisfaction Rate'}
+              {t.common.satisfactionRate}
             </p>
           </div>
           <div className="text-center">
             <p className="text-3xl font-bold text-primary mb-2">24/7</p>
             <p className="text-muted-foreground">
-              {language === 'ar' ? 'دعم طبي' : 'Medical Support'}
+              {t.common.medicalSupport}
             </p>
           </div>
         </div>
@@ -160,24 +160,21 @@ export const Testimonials = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-6 text-lg">
-            {language === 'ar' 
-              ? 'انضم إلى آلاف المرضى الراضين عن خدماتنا'
-              : 'Join thousands of satisfied patients who trust our services'
-            }
+            {t.common.joinPatients}
           </p>
           <button
             onClick={() => {
               const phone = '+966501234567';
-              const message = language === 'ar' 
+              const message = language === 'ar'
                 ? 'مرحباً، أود حجز موعد للكشف الطبي'
                 : 'Hello, I would like to book a medical appointment';
-              
+
               const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
               window.open(whatsappUrl, '_blank');
             }}
             className="btn-medical text-lg px-8 py-4"
           >
-            {language === 'ar' ? 'احجز موعدك الآن' : 'Book Your Appointment Now'}
+            {t.common.bookNow}
           </button>
         </div>
       </div>

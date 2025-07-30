@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import { toast } from 'sonner';
 import clinicImg from '@/assets/clinic-interior.jpg';
@@ -23,21 +23,21 @@ export const Contact = () => {
 
   const handleWhatsAppSend = () => {
     if (!formData.name || !formData.phone || !formData.message) {
-      toast.error(language === 'ar' ? 'يرجى ملء جميع الحقول' : 'Please fill all fields');
+      toast.error(t.common.fillAllFields);
       return;
     }
 
     const phone = '+966501234567';
-    const message = language === 'ar' 
+    const message = language === 'ar'
       ? `مرحباً، اسمي ${formData.name}\nرقم هاتفي: ${formData.phone}\n\nرسالتي:\n${formData.message}`
       : `Hello, my name is ${formData.name}\nMy phone: ${formData.phone}\n\nMessage:\n${formData.message}`;
-    
+
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-    
+
     // Clear form
     setFormData({ name: '', phone: '', message: '' });
-    toast.success(language === 'ar' ? 'تم إرسال الرسالة' : 'Message sent successfully');
+    toast.success(t.common.messageSent);
   };
 
   return (

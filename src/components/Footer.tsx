@@ -1,5 +1,5 @@
 import { Heart, Stethoscope } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 
 export const Footer = () => {
@@ -32,20 +32,20 @@ export const Footer = () => {
           {/* Quick Links */}
           <div className="text-center">
             <h4 className="font-semibold mb-4">
-              {language === 'ar' ? 'روابط سريعة' : 'Quick Links'}
+              {t.common.quickLinks}
             </h4>
             <div className="space-y-2">
               <a href="#home" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">
-                {language === 'ar' ? 'الرئيسية' : 'Home'}
+                {t.nav.home}
               </a>
               <a href="#experience" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">
-                {language === 'ar' ? 'الخبرات' : 'Experience'}
+                {t.nav.experience}
               </a>
               <a href="#services" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">
-                {language === 'ar' ? 'الخدمات' : 'Services'}
+                {t.nav.services}
               </a>
               <a href="#contact" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">
-                {language === 'ar' ? 'اتصل بنا' : 'Contact'}
+                {t.nav.contact}
               </a>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { Calendar, Users, Award } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 import doctorHero from '@/assets/doctor-hero.jpg';
 

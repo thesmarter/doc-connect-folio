@@ -1,5 +1,5 @@
 import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
-import { useLanguage } from '@/hooks/useLanguage';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { content } from '@/data/content';
 
 export const Experience = () => {
