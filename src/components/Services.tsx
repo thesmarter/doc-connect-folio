@@ -7,27 +7,64 @@ export const Services = () => {
   const { themeData } = useTheme();
   const t = content[language];
 
+  // Get section background based on theme
+  const getSectionBackground = () => {
+    return themeData.backgroundImages.services;
+  };
+
   return (
-    <section id="services" className="py-20 bg-background">
+    <section
+      id="services"
+      className="py-20 relative"
+      style={{ background: getSectionBackground() }}
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="section-header">{t.services.title}</h2>
-          <p className="section-subheader">{t.services.subtitle}</p>
+          <h2 className={`section-header ${
+            themeData.layout.heroStyle === 'playful' ? 'text-4xl md:text-5xl' :
+            'text-3xl md:text-4xl'
+          }`}>{t.services.title}</h2>
+          <p className={`section-subheader ${
+            themeData.layout.heroStyle === 'playful' ? 'text-xl' : 'text-lg'
+          }`}>{t.services.subtitle}</p>
         </div>
 
         {/* Services Grid */}
-        <div className="medical-grid mb-16">
+        <div className={`medical-grid mb-16 ${
+          themeData.layout.spacing === 'relaxed' ? 'gap-8' :
+          themeData.layout.spacing === 'compact' ? 'gap-4' :
+          'gap-6'
+        }`}>
           {themeData.services.map((service, index) => (
-            <div key={index} className="medical-card-hover group">
+            <div
+              key={index}
+              className={`group card-${themeData.layout.cardStyle} p-6 ${
+                themeData.layout.heroStyle === 'playful' ? 'hover:transform hover:scale-105 hover:rotate-1' :
+                themeData.layout.heroStyle === 'elegant' ? 'hover:shadow-2xl' :
+                'medical-card-hover'
+              }`}
+            >
               <div className="text-center">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className={`text-4xl mb-4 transition-transform duration-300 ${
+                  themeData.layout.heroStyle === 'playful' ? 'group-hover:scale-125 group-hover:rotate-12' :
+                  'group-hover:scale-110'
+                } ${
+                  themeData.layout.heroStyle === 'playful' ? 'animate-bounce' : ''
+                }`} style={{ animationDelay: `${index * 0.1}s` }}>
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className={`font-semibold text-foreground mb-3 group-hover:text-primary transition-colors ${
+                  themeData.layout.heroStyle === 'playful' ? 'text-2xl' :
+                  themeData.layout.heroStyle === 'elegant' ? 'text-xl' :
+                  'text-xl'
+                }`}>
                   {service.title[language]}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className={`text-muted-foreground leading-relaxed ${
+                  themeData.layout.heroStyle === 'elegant' ? 'text-sm' :
+                  'text-base'
+                }`}>
                   {service.description[language]}
                 </p>
               </div>

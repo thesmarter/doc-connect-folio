@@ -9,12 +9,21 @@ export const Experience = () => {
   const t = content[language];
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section
+      id="experience"
+      className="py-20 relative"
+      style={{ background: themeData.backgroundImages.about }}
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="section-header">{t.experience.title}</h2>
-          <p className="section-subheader">{t.experience.subtitle}</p>
+          <h2 className={`section-header ${
+            themeData.layout.heroStyle === 'playful' ? 'text-4xl md:text-5xl' :
+            'text-3xl md:text-4xl'
+          }`}>{t.experience.title}</h2>
+          <p className={`section-subheader ${
+            themeData.layout.heroStyle === 'playful' ? 'text-xl' : 'text-lg'
+          }`}>{t.experience.subtitle}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -29,15 +38,30 @@ export const Experience = () => {
               </h3>
             </div>
             
-            <div className="space-y-6">
+            <div className={`space-y-6 ${
+              themeData.layout.spacing === 'relaxed' ? 'space-y-8' :
+              themeData.layout.spacing === 'compact' ? 'space-y-4' :
+              'space-y-6'
+            }`}>
               {themeData.workExperience.map((item, index) => (
-                <div key={index} className="medical-card border-r-4 border-primary">
+                <div
+                  key={index}
+                  className={`card-${themeData.layout.cardStyle} p-6 border-r-4 border-primary ${
+                    themeData.layout.heroStyle === 'playful' ? 'hover:transform hover:scale-105' :
+                    themeData.layout.heroStyle === 'elegant' ? 'hover:shadow-xl' :
+                    ''
+                  }`}
+                >
                   <div className="flex items-start gap-4">
-                    <Calendar className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <Calendar className={`w-5 h-5 text-primary mt-1 flex-shrink-0 icon-${themeData.visuals.iconStyle}`} />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">{item.title[language]}</h4>
+                      <h4 className={`font-semibold text-foreground mb-1 ${
+                        themeData.layout.heroStyle === 'playful' ? 'text-lg' : 'text-base'
+                      }`}>{item.title[language]}</h4>
                       <p className="text-primary text-sm font-medium mb-2">{item.period[language]}</p>
-                      <p className="text-muted-foreground">{item.description[language]}</p>
+                      <p className={`text-muted-foreground ${
+                        themeData.layout.heroStyle === 'elegant' ? 'text-sm' : 'text-base'
+                      }`}>{item.description[language]}</p>
                     </div>
                   </div>
                 </div>
@@ -56,15 +80,30 @@ export const Experience = () => {
               </h3>
             </div>
             
-            <div className="space-y-6">
+            <div className={`space-y-6 ${
+              themeData.layout.spacing === 'relaxed' ? 'space-y-8' :
+              themeData.layout.spacing === 'compact' ? 'space-y-4' :
+              'space-y-6'
+            }`}>
               {themeData.education.map((item, index) => (
-                <div key={index} className="medical-card border-r-4 border-secondary">
+                <div
+                  key={index}
+                  className={`card-${themeData.layout.cardStyle} p-6 border-r-4 border-secondary ${
+                    themeData.layout.heroStyle === 'playful' ? 'hover:transform hover:scale-105' :
+                    themeData.layout.heroStyle === 'elegant' ? 'hover:shadow-xl' :
+                    ''
+                  }`}
+                >
                   <div className="flex items-start gap-4">
-                    <Calendar className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                    <Calendar className={`w-5 h-5 text-secondary mt-1 flex-shrink-0 icon-${themeData.visuals.iconStyle}`} />
                     <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">{item.title[language]}</h4>
+                      <h4 className={`font-semibold text-foreground mb-1 ${
+                        themeData.layout.heroStyle === 'playful' ? 'text-lg' : 'text-base'
+                      }`}>{item.title[language]}</h4>
                       <p className="text-secondary text-sm font-medium mb-2">{item.period[language]}</p>
-                      <p className="text-muted-foreground">{item.description[language]}</p>
+                      <p className={`text-muted-foreground ${
+                        themeData.layout.heroStyle === 'elegant' ? 'text-sm' : 'text-base'
+                      }`}>{item.description[language]}</p>
                     </div>
                   </div>
                 </div>

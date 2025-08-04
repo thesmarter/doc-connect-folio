@@ -10,6 +10,22 @@ export interface ThemeColors {
   accentLight: string;
 }
 
+export interface ThemeLayout {
+  heroStyle: 'classic' | 'modern' | 'playful' | 'elegant';
+  cardStyle: 'rounded' | 'sharp' | 'soft' | 'minimal';
+  buttonStyle: 'solid' | 'outline' | 'gradient' | 'soft';
+  spacing: 'compact' | 'normal' | 'relaxed';
+  headerLayout: 'centered' | 'split' | 'minimal';
+}
+
+export interface ThemeVisuals {
+  backgroundPattern: string;
+  iconStyle: 'outline' | 'filled' | 'duotone' | 'playful';
+  shadowStyle: 'subtle' | 'prominent' | 'soft' | 'none';
+  borderRadius: 'none' | 'small' | 'medium' | 'large' | 'full';
+  animations: 'minimal' | 'smooth' | 'playful' | 'professional';
+}
+
 export interface DoctorInfo {
   name: {
     ar: string;
@@ -87,6 +103,8 @@ export interface MedicalTheme {
     en: string;
   };
   colors: ThemeColors;
+  layout: ThemeLayout;
+  visuals: ThemeVisuals;
   doctor: DoctorInfo;
   services: MedicalService[];
   workExperience: WorkExperience[];
@@ -94,6 +112,11 @@ export interface MedicalTheme {
   heroImage: string;
   consultationImage: string;
   clinicImage: string;
+  backgroundImages: {
+    hero: string;
+    services: string;
+    about: string;
+  };
 }
 
 export interface ThemeContextType {

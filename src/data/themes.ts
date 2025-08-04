@@ -17,6 +17,20 @@ export const medicalThemes: MedicalTheme[] = [
       accent: '45 100% 65%',
       accentLight: '45 100% 95%'
     },
+    layout: {
+      heroStyle: 'classic',
+      cardStyle: 'rounded',
+      buttonStyle: 'solid',
+      spacing: 'normal',
+      headerLayout: 'split'
+    },
+    visuals: {
+      backgroundPattern: 'medical-grid',
+      iconStyle: 'outline',
+      shadowStyle: 'subtle',
+      borderRadius: 'medium',
+      animations: 'professional'
+    },
     doctor: {
       name: {
         ar: 'د. أحمد محمد علي',
@@ -202,7 +216,12 @@ export const medicalThemes: MedicalTheme[] = [
     ],
     heroImage: '/src/assets/doctor-hero.jpg',
     consultationImage: '/src/assets/consultation.jpg',
-    clinicImage: '/src/assets/clinic-interior.jpg'
+    clinicImage: '/src/assets/clinic-interior.jpg',
+    backgroundImages: {
+      hero: 'linear-gradient(135deg, hsl(200, 100%, 40%) 0%, hsl(160, 60%, 45%) 100%)',
+      services: 'linear-gradient(45deg, hsl(200, 100%, 95%) 0%, hsl(160, 40%, 98%) 100%)',
+      about: 'radial-gradient(circle at center, hsl(200, 100%, 98%) 0%, hsl(200, 50%, 95%) 100%)'
+    }
   },
 
   // ثيم طبيب النساء والولادة
@@ -220,6 +239,20 @@ export const medicalThemes: MedicalTheme[] = [
       secondaryLight: '280 30% 95%',
       accent: '340 80% 65%',
       accentLight: '340 80% 95%'
+    },
+    layout: {
+      heroStyle: 'elegant',
+      cardStyle: 'soft',
+      buttonStyle: 'soft',
+      spacing: 'relaxed',
+      headerLayout: 'centered'
+    },
+    visuals: {
+      backgroundPattern: 'floral-subtle',
+      iconStyle: 'filled',
+      shadowStyle: 'soft',
+      borderRadius: 'large',
+      animations: 'smooth'
     },
     doctor: {
       name: {
@@ -378,7 +411,12 @@ export const medicalThemes: MedicalTheme[] = [
     ],
     heroImage: '/src/assets/doctor-hero.jpg',
     consultationImage: '/src/assets/consultation.jpg',
-    clinicImage: '/src/assets/clinic-interior.jpg'
+    clinicImage: '/src/assets/clinic-interior.jpg',
+    backgroundImages: {
+      hero: 'linear-gradient(135deg, hsl(320, 60%, 50%) 0%, hsl(280, 40%, 60%) 100%)',
+      services: 'linear-gradient(45deg, hsl(320, 60%, 95%) 0%, hsl(280, 30%, 98%) 100%)',
+      about: 'radial-gradient(circle at center, hsl(340, 80%, 98%) 0%, hsl(320, 40%, 95%) 100%)'
+    }
   },
 
   // ثيم طبيب الأطفال
@@ -396,6 +434,20 @@ export const medicalThemes: MedicalTheme[] = [
       secondaryLight: '180 40% 95%',
       accent: '60 90% 60%',
       accentLight: '60 90% 95%'
+    },
+    layout: {
+      heroStyle: 'playful',
+      cardStyle: 'rounded',
+      buttonStyle: 'gradient',
+      spacing: 'relaxed',
+      headerLayout: 'centered'
+    },
+    visuals: {
+      backgroundPattern: 'playful-dots',
+      iconStyle: 'playful',
+      shadowStyle: 'soft',
+      borderRadius: 'large',
+      animations: 'playful'
     },
     doctor: {
       name: {
@@ -554,7 +606,12 @@ export const medicalThemes: MedicalTheme[] = [
     ],
     heroImage: '/src/assets/doctor-hero.jpg',
     consultationImage: '/src/assets/consultation.jpg',
-    clinicImage: '/src/assets/clinic-interior.jpg'
+    clinicImage: '/src/assets/clinic-interior.jpg',
+    backgroundImages: {
+      hero: 'linear-gradient(135deg, hsl(120, 70%, 45%) 0%, hsl(180, 50%, 50%) 100%)',
+      services: 'linear-gradient(45deg, hsl(120, 70%, 95%) 0%, hsl(180, 40%, 98%) 100%)',
+      about: 'radial-gradient(circle at center, hsl(60, 90%, 98%) 0%, hsl(120, 50%, 95%) 100%)'
+    }
   },
 
   // ثيم طبيب الأسنان
@@ -572,6 +629,20 @@ export const medicalThemes: MedicalTheme[] = [
       secondaryLight: '190 50% 95%',
       accent: '220 80% 60%',
       accentLight: '220 80% 95%'
+    },
+    layout: {
+      heroStyle: 'modern',
+      cardStyle: 'minimal',
+      buttonStyle: 'outline',
+      spacing: 'compact',
+      headerLayout: 'minimal'
+    },
+    visuals: {
+      backgroundPattern: 'clean-lines',
+      iconStyle: 'outline',
+      shadowStyle: 'prominent',
+      borderRadius: 'small',
+      animations: 'minimal'
     },
     doctor: {
       name: {
@@ -730,6 +801,11 @@ export const medicalThemes: MedicalTheme[] = [
     ],
     heroImage: '/src/assets/doctor-hero.jpg',
     consultationImage: '/src/assets/consultation.jpg',
-    clinicImage: '/src/assets/clinic-interior.jpg'
+    clinicImage: '/src/assets/clinic-interior.jpg',
+    backgroundImages: {
+      hero: 'linear-gradient(135deg, hsl(210, 100%, 50%) 0%, hsl(190, 60%, 55%) 100%)',
+      services: 'linear-gradient(45deg, hsl(210, 100%, 95%) 0%, hsl(190, 50%, 98%) 100%)',
+      about: 'radial-gradient(circle at center, hsl(220, 80%, 98%) 0%, hsl(210, 60%, 95%) 100%)'
+    }
   }
 ];

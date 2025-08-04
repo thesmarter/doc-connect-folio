@@ -208,6 +208,298 @@
     @apply bg-primary/10 text-primary border border-primary/20;
   }
 
+  /* Theme-specific Layout Styles */
+
+  /* Hero Styles */
+  .hero-classic {
+    @apply bg-gradient-to-br from-background to-primary-light/10;
+  }
+
+  .hero-modern {
+    @apply bg-gradient-to-r from-background via-primary-light/5 to-background;
+    position: relative;
+  }
+
+  .hero-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, hsl(var(--primary) / 0.05) 50%, transparent 51%);
+  }
+
+  .hero-playful {
+    @apply bg-gradient-to-br from-primary-light/20 via-background to-accent-light/20;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-playful::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .hero-elegant {
+    @apply bg-gradient-to-br from-background via-primary-light/10 to-secondary-light/10;
+    position: relative;
+  }
+
+  .hero-elegant::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, hsl(var(--primary) / 0.05) 100%);
+  }
+
+  /* Card Styles */
+  .card-rounded {
+    @apply rounded-2xl shadow-lg border border-border/50;
+    @apply bg-card backdrop-blur-sm;
+  }
+
+  .card-sharp {
+    @apply rounded-none shadow-xl border-2 border-border;
+    @apply bg-card;
+  }
+
+  .card-soft {
+    @apply rounded-3xl shadow-2xl border-0;
+    @apply bg-gradient-to-br from-card to-card/80;
+    box-shadow: 0 25px 50px -12px hsl(var(--primary) / 0.15);
+  }
+
+  .card-minimal {
+    @apply rounded-lg shadow-sm border border-border/30;
+    @apply bg-card/50 backdrop-blur-md;
+  }
+
+  /* Button Styles */
+  .btn-solid {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+    @apply rounded-lg px-6 py-3 font-semibold transition-all duration-200;
+    @apply shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+    @apply rounded-lg px-6 py-3 font-semibold transition-all duration-200;
+    @apply bg-transparent;
+  }
+
+  .btn-gradient {
+    @apply text-white font-semibold rounded-lg px-6 py-3;
+    @apply transition-all duration-200 shadow-md hover:shadow-lg;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--primary)));
+    transform: translateY(-1px);
+  }
+
+  .btn-soft {
+    @apply bg-primary/10 text-primary hover:bg-primary/20;
+    @apply rounded-2xl px-6 py-3 font-semibold transition-all duration-300;
+    @apply border border-primary/20 hover:border-primary/30;
+  }
+
+  /* Spacing Styles */
+  .spacing-compact {
+    --section-padding: 3rem;
+    --element-gap: 1rem;
+  }
+
+  .spacing-normal {
+    --section-padding: 5rem;
+    --element-gap: 1.5rem;
+  }
+
+  .spacing-relaxed {
+    --section-padding: 7rem;
+    --element-gap: 2rem;
+  }
+
+  /* Animation Styles */
+  .animations-minimal * {
+    transition: all 0.2s ease;
+  }
+
+  .animations-professional * {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animations-smooth * {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .animations-playful * {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Background Patterns */
+  .bg-medical-grid {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .bg-floral-subtle {
+    background-image: radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+
+  .bg-playful-dots {
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.15) 2px, transparent 2px);
+    background-size: 25px 25px;
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .bg-clean-lines {
+    background-image: linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Keyframe Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  @keyframes slide-in-right {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slide-in-left {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Icon Styles */
+  .icon-outline {
+    stroke-width: 1.5;
+    fill: none;
+  }
+
+  .icon-filled {
+    stroke-width: 0;
+    fill: currentColor;
+  }
+
+  .icon-duotone {
+    stroke-width: 1;
+    fill: hsl(var(--primary) / 0.2);
+  }
+
+  .icon-playful {
+    stroke-width: 2;
+    fill: none;
+    filter: drop-shadow(2px 2px 4px hsl(var(--primary) / 0.2));
+  }
+
+  /* Specialty-specific enhancements */
+
+  /* Pediatrics playful animations */
+  .pediatrics-bounce {
+    animation: pediatrics-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes pediatrics-bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+
+  /* Gynecology elegant transitions */
+  .gynecology-elegant {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .gynecology-elegant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px hsl(var(--primary) / 0.15);
+  }
+
+  /* Dentistry clean effects */
+  .dentistry-clean {
+    border: 1px solid hsl(var(--border));
+    transition: all 0.2s ease;
+  }
+
+  .dentistry-clean:hover {
+    border-color: hsl(var(--primary));
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.1);
+  }
+
+  /* Internal medicine professional */
+  .internal-professional {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .internal-professional::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .internal-professional:hover::before {
+    left: 100%;
+  }
+
+  /* Theme-specific text styles */
+  .text-playful {
+    font-weight: 600;
+    letter-spacing: 0.025em;
+  }
+
+  .text-elegant {
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+  }
+
+  .text-modern {
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .text-classic {
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+
   /* Gradient Text */
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;

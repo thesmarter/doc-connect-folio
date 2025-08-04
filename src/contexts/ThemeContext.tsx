@@ -24,10 +24,13 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   // Get current theme data
   const themeData = medicalThemes.find(theme => theme.id === currentTheme) || medicalThemes[0];
 
-  // Apply theme colors to CSS variables
+  // Apply theme colors and styles to CSS variables and body classes
   useEffect(() => {
     const root = document.documentElement;
+    const body = document.body;
     const colors = themeData.colors;
+    const layout = themeData.layout;
+    const visuals = themeData.visuals;
 
     // Apply theme colors as CSS custom properties
     root.style.setProperty('--primary', colors.primary);
@@ -38,9 +41,31 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     root.style.setProperty('--accent', colors.accent);
     root.style.setProperty('--accent-light', colors.accentLight);
 
+    // Remove previous theme classes
+    body.classList.remove(
+      'hero-classic', 'hero-modern', 'hero-playful', 'hero-elegant',
+      'spacing-compact', 'spacing-normal', 'spacing-relaxed',
+      'animations-minimal', 'animations-professional', 'animations-smooth', 'animations-playful',
+      'bg-medical-grid', 'bg-floral-subtle', 'bg-playful-dots', 'bg-clean-lines'
+    );
+
+    // Apply new theme classes
+    body.classList.add(`hero-${layout.heroStyle}`);
+    body.classList.add(`spacing-${layout.spacing}`);
+    body.classList.add(`animations-${visuals.animations}`);
+    body.classList.add(`bg-${visuals.backgroundPattern}`);
+
+    // Apply border radius preference
+    root.style.setProperty('--theme-border-radius',
+      visuals.borderRadius === 'none' ? '0' :
+      visuals.borderRadius === 'small' ? '0.375rem' :
+      visuals.borderRadius === 'medium' ? '0.5rem' :
+      visuals.borderRadius === 'large' ? '1rem' : '9999px'
+    );
+
     // Persist theme preference
     localStorage.setItem(THEME_STORAGE_KEY, currentTheme);
-  }, [currentTheme, themeData.colors]);
+  }, [currentTheme, themeData]);
 
   const setTheme = (theme: MedicalSpecialty) => {
     setCurrentTheme(theme);
