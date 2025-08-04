@@ -16,18 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 11% 15%;
 
-    /* Medical blue primary */
+    /* Theme colors - dynamically updated by ThemeContext */
     --primary: 200 100% 40%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 200 100% 85%;
     --primary-glow: 200 100% 60%;
 
-    /* Healing green secondary */
     --secondary: 160 60% 45%;
     --secondary-foreground: 0 0% 100%;
     --secondary-light: 160 40% 90%;
 
-    /* Professional accent */
     --accent: 45 100% 65%;
     --accent-foreground: 210 11% 15%;
     --accent-light: 45 100% 95%;

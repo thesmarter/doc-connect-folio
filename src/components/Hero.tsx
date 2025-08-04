@@ -1,10 +1,11 @@
 import { Calendar, Users, Award } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import { content } from '@/data/content';
-import doctorHero from '@/assets/doctor-hero.jpg';
 
 export const Hero = () => {
   const { language } = useLanguage();
+  const { themeData } = useTheme();
   const t = content[language];
 
   const handleBookAppointment = () => {
@@ -25,13 +26,13 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold gradient-text">
-                {t.hero.title}
+                {themeData.doctor.name[language]}
               </h1>
               <h2 className="text-xl md:text-2xl text-primary font-semibold">
-                {t.hero.subtitle}
+                {themeData.doctor.title[language]}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                {t.hero.description}
+                {themeData.doctor.description[language]}
               </p>
             </div>
 
@@ -50,22 +51,22 @@ export const Hero = () => {
                 <div className="medical-icon mx-auto mb-3">
                   <Award className="w-6 h-6" />
                 </div>
-                <p className="font-bold text-primary text-lg">15+</p>
-                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'سنة خبرة' : 'Years Experience'}</p>
+                <p className="font-bold text-primary text-lg">{themeData.doctor.experience[language].split(' ')[0]}</p>
+                <p className="text-sm text-muted-foreground">{themeData.doctor.experience[language]}</p>
               </div>
               <div className="text-center">
                 <div className="medical-icon mx-auto mb-3">
                   <Users className="w-6 h-6" />
                 </div>
-                <p className="font-bold text-primary text-lg">5000+</p>
-                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'مريض' : 'Patients'}</p>
+                <p className="font-bold text-primary text-lg">{themeData.doctor.patients[language].split(' ')[0]}</p>
+                <p className="text-sm text-muted-foreground">{themeData.doctor.patients[language]}</p>
               </div>
               <div className="text-center">
                 <div className="medical-icon mx-auto mb-3">
                   <Award className="w-6 h-6" />
                 </div>
-                <p className="font-bold text-primary text-lg">25+</p>
-                <p className="text-sm text-muted-foreground">{language === 'ar' ? 'شهادة' : 'Certificates'}</p>
+                <p className="font-bold text-primary text-lg">{themeData.doctor.certificates[language].split(' ')[0]}</p>
+                <p className="text-sm text-muted-foreground">{themeData.doctor.certificates[language]}</p>
               </div>
             </div>
           </div>
@@ -73,9 +74,9 @@ export const Hero = () => {
           {/* Image */}
           <div className="relative">
             <div className="hero-pulse rounded-3xl overflow-hidden">
-              <img 
-                src={doctorHero} 
-                alt="Dr. Ahmed Mohammed Ali"
+              <img
+                src={themeData.heroImage}
+                alt={themeData.doctor.name[language]}
                 className="w-full h-[600px] object-cover"
               />
             </div>

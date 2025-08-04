@@ -322,5 +322,300 @@ Healthy nutrition is an investment in your future health. Start with small chang
       en: '6 min read'
     },
     featured: false
+  },
+
+  // مقال طب النساء والولادة
+  {
+    id: '4',
+    slug: 'pregnancy-care-guide',
+    title: {
+      ar: 'دليل شامل للعناية أثناء الحمل',
+      en: 'Comprehensive Pregnancy Care Guide'
+    },
+    excerpt: {
+      ar: 'تعرفي على أهم النصائح والإرشادات للعناية بصحتك وصحة جنينك أثناء فترة الحمل.',
+      en: 'Learn essential tips and guidelines for taking care of your health and your baby\'s health during pregnancy.'
+    },
+    content: {
+      ar: `
+# دليل شامل للعناية أثناء الحمل
+
+فترة الحمل من أهم المراحل في حياة المرأة، وتتطلب عناية خاصة ومتابعة دقيقة لضمان صحة الأم والجنين.
+
+## النصائح الأساسية للحمل الصحي:
+
+### 1. التغذية السليمة
+- تناولي الأطعمة الغنية بالفيتامينات والمعادن
+- احرصي على تناول حمض الفوليك
+- تجنبي الأطعمة النيئة والمصنعة
+
+### 2. المتابعة الطبية المنتظمة
+- زيارة الطبيب شهرياً في الثلث الأول
+- إجراء الفحوصات اللازمة في مواعيدها
+- متابعة نمو الجنين بالسونار
+
+### 3. النشاط البدني المناسب
+- ممارسة الرياضة الخفيفة
+- تمارين التنفس والاسترخاء
+- تجنب الأنشطة الخطيرة
+
+## الخلاصة
+
+العناية الصحيحة أثناء الحمل تضمن ولادة آمنة وطفل صحي.
+      `,
+      en: `
+# Comprehensive Pregnancy Care Guide
+
+Pregnancy is one of the most important stages in a woman's life, requiring special care and careful monitoring to ensure the health of both mother and baby.
+
+## Essential Tips for Healthy Pregnancy:
+
+### 1. Proper Nutrition
+- Eat foods rich in vitamins and minerals
+- Make sure to take folic acid
+- Avoid raw and processed foods
+
+### 2. Regular Medical Follow-up
+- Visit your doctor monthly in the first trimester
+- Perform necessary tests on schedule
+- Monitor fetal growth with ultrasound
+
+### 3. Appropriate Physical Activity
+- Practice light exercise
+- Breathing and relaxation exercises
+- Avoid dangerous activities
+
+## Conclusion
+
+Proper care during pregnancy ensures safe delivery and a healthy baby.
+      `
+    },
+    author: {
+      name: {
+        ar: 'د. فاطمة أحمد السالم',
+        en: 'Dr. Fatima Ahmed Al-Salem'
+      },
+      title: {
+        ar: 'استشارية طب النساء والولادة',
+        en: 'Consultant Gynecologist & Obstetrician'
+      },
+      image: '/src/assets/doctor-hero.jpg'
+    },
+    publishedAt: '2024-12-01',
+    updatedAt: '2024-12-01',
+    category: {
+      ar: 'طب النساء والولادة',
+      en: 'Gynecology & Obstetrics'
+    },
+    tags: {
+      ar: ['الحمل', 'العناية الصحية', 'صحة المرأة'],
+      en: ['Pregnancy', 'Healthcare', 'Women\'s Health']
+    },
+    image: 'https://files1.24.ae/files/images/herthealth.jpg',
+    readTime: {
+      ar: '6 دقائق قراءة',
+      en: '6 min read'
+    },
+    featured: false
+  },
+
+  // مقال طب الأطفال
+  {
+    id: '5',
+    slug: 'child-vaccination-guide',
+    title: {
+      ar: 'دليل التطعيمات الأساسية للأطفال',
+      en: 'Essential Vaccination Guide for Children'
+    },
+    excerpt: {
+      ar: 'تعرف على جدول التطعيمات الأساسية للأطفال وأهميتها في الوقاية من الأمراض.',
+      en: 'Learn about the essential vaccination schedule for children and their importance in disease prevention.'
+    },
+    content: {
+      ar: `
+# دليل التطعيمات الأساسية للأطفال
+
+التطعيمات من أهم وسائل الوقاية من الأمراض المعدية عند الأطفال، وتساعد في بناء مناعة قوية.
+
+## جدول التطعيمات الأساسية:
+
+### من الولادة حتى 6 أشهر
+- تطعيم الدرن (BCG) عند الولادة
+- تطعيم شلل الأطفال في الشهر الثاني
+- التطعيم الخماسي في الشهرين الثاني والرابع
+
+### من 6 أشهر حتى سنتين
+- تطعيم الحصبة في الشهر التاسع
+- تطعيم MMR في السنة الأولى
+- جرعات تنشيطية حسب الجدول
+
+### أهمية التطعيمات
+- حماية من الأمراض الخطيرة
+- بناء مناعة المجتمع
+- تقليل معدلات الوفيات
+
+## الخلاصة
+
+الالتزام بجدول التطعيمات يضمن صحة أفضل لطفلك ومجتمعك.
+      `,
+      en: `
+# Essential Vaccination Guide for Children
+
+Vaccinations are among the most important means of preventing infectious diseases in children and help build strong immunity.
+
+## Essential Vaccination Schedule:
+
+### Birth to 6 Months
+- BCG vaccination at birth
+- Polio vaccination at 2 months
+- Pentavalent vaccine at 2 and 4 months
+
+### 6 Months to 2 Years
+- Measles vaccination at 9 months
+- MMR vaccination in the first year
+- Booster doses according to schedule
+
+### Importance of Vaccinations
+- Protection from serious diseases
+- Building community immunity
+- Reducing mortality rates
+
+## Conclusion
+
+Following the vaccination schedule ensures better health for your child and community.
+      `
+    },
+    author: {
+      name: {
+        ar: 'د. محمد عبدالله الخالدي',
+        en: 'Dr. Mohammed Abdullah Al-Khalidi'
+      },
+      title: {
+        ar: 'استشاري طب الأطفال وحديثي الولادة',
+        en: 'Consultant Pediatrician & Neonatologist'
+      },
+      image: '/src/assets/doctor-hero.jpg'
+    },
+    publishedAt: '2024-11-28',
+    updatedAt: '2024-11-28',
+    category: {
+      ar: 'طب الأطفال',
+      en: 'Pediatrics'
+    },
+    tags: {
+      ar: ['التطعيمات', 'صحة الأطفال', 'الوقاية'],
+      en: ['Vaccinations', 'Child Health', 'Prevention']
+    },
+    image: '/src/assets/doctor-hero.jpg',
+    readTime: {
+      ar: '5 دقائق قراءة',
+      en: '5 min read'
+    },
+    featured: false
+  },
+
+  // مقال طب الأسنان
+  {
+    id: '6',
+    slug: 'dental-care-tips',
+    title: {
+      ar: 'نصائح العناية بالأسنان للحصول على ابتسامة صحية',
+      en: 'Dental Care Tips for a Healthy Smile'
+    },
+    excerpt: {
+      ar: 'اكتشف أفضل الطرق للعناية بأسنانك والحفاظ على صحة الفم والأسنان.',
+      en: 'Discover the best ways to care for your teeth and maintain oral and dental health.'
+    },
+    content: {
+      ar: `
+# نصائح العناية بالأسنان للحصول على ابتسامة صحية
+
+العناية بالأسنان جزء أساسي من الصحة العامة، وتتطلب اهتماماً يومياً ومتابعة دورية.
+
+## أساسيات العناية بالأسنان:
+
+### 1. التنظيف اليومي
+- اغسل أسنانك مرتين يومياً بالفرشاة والمعجون
+- استخدم خيط الأسنان لإزالة البقايا
+- اشطف فمك بغسول الفم المناسب
+
+### 2. النظام الغذائي الصحي
+- قلل من السكريات والحلويات
+- تناول الأطعمة الغنية بالكالسيوم
+- اشرب الماء بكثرة
+
+### 3. الزيارات الدورية
+- زر طبيب الأسنان كل 6 أشهر
+- لا تؤجل علاج المشاكل البسيطة
+- اطلب تنظيف الأسنان المهني
+
+### 4. تجنب العادات الضارة
+- لا تستخدم أسنانك لفتح الأشياء
+- تجنب التدخين
+- قلل من المشروبات الملونة
+
+## الخلاصة
+
+العناية المنتظمة بالأسنان تضمن ابتسامة صحية وجميلة مدى الحياة.
+      `,
+      en: `
+# Dental Care Tips for a Healthy Smile
+
+Dental care is an essential part of overall health, requiring daily attention and regular follow-up.
+
+## Dental Care Basics:
+
+### 1. Daily Cleaning
+- Brush your teeth twice daily with toothbrush and toothpaste
+- Use dental floss to remove debris
+- Rinse your mouth with appropriate mouthwash
+
+### 2. Healthy Diet
+- Reduce sugars and sweets
+- Eat foods rich in calcium
+- Drink plenty of water
+
+### 3. Regular Visits
+- Visit your dentist every 6 months
+- Don't postpone treating simple problems
+- Request professional teeth cleaning
+
+### 4. Avoid Harmful Habits
+- Don't use your teeth to open things
+- Avoid smoking
+- Reduce colored beverages
+
+## Conclusion
+
+Regular dental care ensures a healthy and beautiful smile for life.
+      `
+    },
+    author: {
+      name: {
+        ar: 'د. سارة عبدالرحمن النجار',
+        en: 'Dr. Sarah Abdulrahman Al-Najjar'
+      },
+      title: {
+        ar: 'استشارية طب الأسنان والتقويم',
+        en: 'Consultant Dentist & Orthodontist'
+      },
+      image: '/src/assets/doctor-hero.jpg'
+    },
+    publishedAt: '2024-11-25',
+    updatedAt: '2024-11-25',
+    category: {
+      ar: 'طب الأسنان والتقويم',
+      en: 'Dentistry & Orthodontics'
+    },
+    tags: {
+      ar: ['العناية بالأسنان', 'صحة الفم', 'الوقاية'],
+      en: ['Dental Care', 'Oral Health', 'Prevention']
+    },
+    image: 'https://thaat.co/wp-content/uploads/2024/11/%D8%A7%D9%84%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9-1.webp',
+    readTime: {
+      ar: '7 دقائق قراءة',
+      en: '7 min read'
+    },
+    featured: false
   }
 ];

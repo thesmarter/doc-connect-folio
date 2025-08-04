@@ -2,12 +2,15 @@ import { useState } from 'react';
 import { Menu, X, Stethoscope } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { LanguageToggle } from './LanguageToggle';
+import { ThemeSwitcher } from './ThemeSwitcher';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import { content } from '@/data/content';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language } = useLanguage();
+  const { themeData } = useTheme();
   const t = content[language];
   const location = useLocation();
 
@@ -46,8 +49,8 @@ export const Header = () => {
               <Stethoscope className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="font-bold text-xl text-foreground">د. أحمد علي</h2>
-              <p className="text-sm text-muted-foreground">استشاري طب باطني</p>
+              <h2 className="font-bold text-xl text-foreground">{themeData.doctor.name[language]}</h2>
+              <p className="text-sm text-muted-foreground">{themeData.doctor.title[language]}</p>
             </div>
           </div>
 
@@ -76,6 +79,7 @@ export const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
+            <ThemeSwitcher />
             <LanguageToggle />
             
             {/* Mobile Menu Button */}

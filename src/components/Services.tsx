@@ -1,9 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import { content } from '@/data/content';
-import consultationImg from '@/assets/consultation.jpg';
 
 export const Services = () => {
   const { language } = useLanguage();
+  const { themeData } = useTheme();
   const t = content[language];
 
   return (
@@ -17,17 +18,17 @@ export const Services = () => {
 
         {/* Services Grid */}
         <div className="medical-grid mb-16">
-          {t.services.list.map((service, index) => (
+          {themeData.services.map((service, index) => (
             <div key={index} className="medical-card-hover group">
               <div className="text-center">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {service.title}
+                  {service.title[language]}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
+                  {service.description[language]}
                 </p>
               </div>
             </div>
@@ -37,9 +38,9 @@ export const Services = () => {
         {/* Feature Image */}
         <div className="mt-16">
           <div className="medical-card p-0 overflow-hidden">
-            <img 
-              src={consultationImg} 
-              alt="Medical Consultation"
+            <img
+              src={themeData.consultationImage}
+              alt={`${themeData.doctor.name[language]} - ${t.services.title}`}
               className="w-full h-64 md:h-80 object-cover"
             />
             <div className="p-8 text-center bg-gradient-to-r from-primary/5 to-secondary/5">
