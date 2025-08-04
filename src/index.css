@@ -233,7 +233,7 @@
   .hero-playful {
     @apply bg-gradient-to-br from-primary-light/20 via-background to-accent-light/20;
     position: relative;
-    overflow: hidden;
+    /* Remove overflow: hidden to prevent scroll issues */
   }
 
   .hero-playful::before {
@@ -517,24 +517,47 @@
     letter-spacing: normal;
   }
 
-  /* Fix for playful theme layout issues */
-  .hero-playful {
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
+  /* Ensure proper scrolling and layout for all themes */
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
   }
 
   /* Ensure sections are visible and properly spaced */
   section {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     overflow: visible;
+    display: block;
+  }
+
+  /* Hero section specific fixes */
+  section#home {
+    position: relative;
+    z-index: 1;
   }
 
   /* Prevent animation overflow issues */
   .hero-playful::before {
     z-index: -1;
+    pointer-events: none;
+  }
+
+  /* Ensure playful theme doesn't block scrolling */
+  .hero-playful {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Fix for any potential scroll blocking */
+  .hero-playful * {
+    pointer-events: auto;
+  }
+
+  .hero-playful::before {
+    pointer-events: none;
   }
 
   /* Performance optimization for animations */
@@ -559,6 +582,24 @@
     .hero-playful::before {
       animation: none !important;
     }
+  }
+
+  /* Additional scroll fixes for mobile devices */
+  @media (max-width: 768px) {
+    body {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .hero-playful {
+      min-height: 100vh;
+      max-height: none;
+    }
+  }
+
+  /* Debug styles - remove if not needed */
+  .debug-scroll {
+    border: 2px solid red !important;
+    background: rgba(255, 0, 0, 0.1) !important;
   }
 
   /* Gradient Text */

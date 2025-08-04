@@ -20,7 +20,7 @@ export const Hero = () => {
 
   // Get dynamic hero class based on theme
   const getHeroClass = () => {
-    const baseClass = "min-h-screen flex items-center pt-24";
+    const baseClass = "min-h-screen flex items-center pt-24 relative";
     const themeClass = `hero-${themeData.layout.heroStyle}`;
     return `${baseClass} ${themeClass}`;
   };

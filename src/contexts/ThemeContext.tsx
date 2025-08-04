@@ -41,19 +41,20 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     root.style.setProperty('--accent', colors.accent);
     root.style.setProperty('--accent-light', colors.accentLight);
 
-    // Remove previous theme classes
+    // Remove previous theme classes from body (keep only safe classes)
     body.classList.remove(
-      'hero-classic', 'hero-modern', 'hero-playful', 'hero-elegant',
       'spacing-compact', 'spacing-normal', 'spacing-relaxed',
       'animations-minimal', 'animations-professional', 'animations-smooth', 'animations-playful',
       'bg-medical-grid', 'bg-floral-subtle', 'bg-playful-dots', 'bg-clean-lines'
     );
 
-    // Apply new theme classes
-    body.classList.add(`hero-${layout.heroStyle}`);
+    // Apply new theme classes to body (safe classes only)
     body.classList.add(`spacing-${layout.spacing}`);
     body.classList.add(`animations-${visuals.animations}`);
     body.classList.add(`bg-${visuals.backgroundPattern}`);
+
+    // Store hero style in a data attribute for components to use
+    body.setAttribute('data-hero-style', layout.heroStyle);
 
     // Apply border radius preference
     root.style.setProperty('--theme-border-radius',
