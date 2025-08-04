@@ -592,8 +592,8 @@ Regular dental care ensures a healthy and beautiful smile for life.
     },
     author: {
       name: {
-        ar: 'د. سارة عبدالرحمن النجار',
-        en: 'Dr. Sarah Abdulrahman Al-Najjar'
+        ar: 'د. أحمد عبدالرحمن النجار',
+        en: 'Dr. Ahmed Abdulrahman Al-Najjar'
       },
       title: {
         ar: 'استشارية طب الأسنان والتقويم',
