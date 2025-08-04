@@ -47,11 +47,11 @@ export const Services = () => {
             >
               <div className="text-center">
                 <div className={`text-4xl mb-4 transition-transform duration-300 ${
-                  themeData.layout.heroStyle === 'playful' ? 'group-hover:scale-125 group-hover:rotate-12' :
+                  themeData.layout.heroStyle === 'playful' ? 'group-hover:scale-110 group-hover:rotate-3' :
                   'group-hover:scale-110'
                 } ${
-                  themeData.layout.heroStyle === 'playful' ? 'animate-bounce' : ''
-                }`} style={{ animationDelay: `${index * 0.1}s` }}>
+                  themeData.layout.heroStyle === 'playful' && index < 3 ? 'controlled-bounce' : ''
+                }`} style={{ animationDelay: `${index * 0.5}s` }}>
                   {service.icon}
                 </div>
                 <h3 className={`font-semibold text-foreground mb-3 group-hover:text-primary transition-colors ${

@@ -88,7 +88,7 @@ export const Hero = () => {
                 themeData.layout.heroStyle === 'playful' ? 'hover:transform hover:scale-105' : ''
               }`}>
                 <div className={`medical-icon mx-auto mb-3 ${
-                  themeData.layout.heroStyle === 'playful' ? 'animate-bounce' : ''
+                  themeData.layout.heroStyle === 'playful' ? 'controlled-bounce' : ''
                 }`}>
                   <Award className={`w-6 h-6 icon-${themeData.visuals.iconStyle}`} />
                 </div>
@@ -99,8 +99,8 @@ export const Hero = () => {
                 themeData.layout.heroStyle === 'playful' ? 'hover:transform hover:scale-105' : ''
               }`}>
                 <div className={`medical-icon mx-auto mb-3 ${
-                  themeData.layout.heroStyle === 'playful' ? 'animate-bounce' : ''
-                }`} style={{ animationDelay: '0.1s' }}>
+                  themeData.layout.heroStyle === 'playful' ? 'controlled-bounce' : ''
+                }`} style={{ animationDelay: '0.3s' }}>
                   <Users className={`w-6 h-6 icon-${themeData.visuals.iconStyle}`} />
                 </div>
                 <p className="font-bold text-primary text-lg">{themeData.doctor.patients[language].split(' ')[0]}</p>
@@ -110,8 +110,8 @@ export const Hero = () => {
                 themeData.layout.heroStyle === 'playful' ? 'hover:transform hover:scale-105' : ''
               }`}>
                 <div className={`medical-icon mx-auto mb-3 ${
-                  themeData.layout.heroStyle === 'playful' ? 'animate-bounce' : ''
-                }`} style={{ animationDelay: '0.2s' }}>
+                  themeData.layout.heroStyle === 'playful' ? 'controlled-bounce' : ''
+                }`} style={{ animationDelay: '0.6s' }}>
                   <Award className={`w-6 h-6 icon-${themeData.visuals.iconStyle}`} />
                 </div>
                 <p className="font-bold text-primary text-lg">{themeData.doctor.certificates[language].split(' ')[0]}</p>

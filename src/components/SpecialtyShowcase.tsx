@@ -99,7 +99,7 @@ const PediatricsShowcase = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <span className="text-3xl animate-bounce">👶</span>
+              <span className="text-3xl controlled-bounce">👶</span>
               <h3 className="text-2xl font-bold text-primary">
                 {language === 'ar' ? 'عالم الأطفال السعيد' : 'Happy Children\'s World'}
               </h3>
@@ -128,17 +128,17 @@ const PediatricsShowcase = () => {
           </div>
           
           <div className="text-center">
-            <div className="text-8xl mb-4 animate-pulse">🌈</div>
+            <div className="text-8xl mb-4">🌈</div>
             <p className="text-lg font-semibold text-secondary">
               {language === 'ar' ? 'بيئة مريحة وودودة للأطفال' : 'Comfortable and friendly environment for children'}
             </p>
           </div>
         </div>
-        
-        {/* Floating elements */}
-        <div className="absolute top-4 right-4 text-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>⭐</div>
-        <div className="absolute bottom-4 left-4 text-2xl animate-bounce" style={{ animationDelay: '1s' }}>🎈</div>
-        <div className="absolute top-1/2 right-8 text-xl animate-bounce" style={{ animationDelay: '1.5s' }}>🦋</div>
+
+        {/* Floating elements - reduced and controlled */}
+        <div className="absolute top-4 right-4 text-2xl controlled-bounce" style={{ animationDelay: '1s' }}>⭐</div>
+        <div className="absolute bottom-4 left-4 text-2xl controlled-bounce" style={{ animationDelay: '2s' }}>🎈</div>
+        <div className="absolute top-1/2 right-8 text-xl controlled-bounce" style={{ animationDelay: '3s' }}>🦋</div>
       </div>
     </div>
   );

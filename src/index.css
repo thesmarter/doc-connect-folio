@@ -179,10 +179,10 @@
 
   /* Hero Animations */
   .hero-float {
-    animation: float 6s ease-in-out infinite;
+    animation: gentle-float 6s ease-in-out infinite;
   }
 
-  @keyframes float {
+  @keyframes gentle-float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
   }
@@ -245,7 +245,7 @@
     height: 200%;
     background: radial-gradient(circle, hsl(var(--primary) / 0.1) 1px, transparent 1px);
     background-size: 30px 30px;
-    animation: float 20s ease-in-out infinite;
+    animation: subtle-drift 30s ease-in-out infinite;
   }
 
   .hero-elegant {
@@ -364,7 +364,7 @@
   .bg-playful-dots {
     background-image: radial-gradient(circle, hsl(var(--primary) / 0.15) 2px, transparent 2px);
     background-size: 25px 25px;
-    animation: float 15s ease-in-out infinite;
+    /* Remove background animation to prevent performance issues */
   }
 
   .bg-clean-lines {
@@ -377,6 +377,13 @@
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     33% { transform: translateY(-10px) rotate(1deg); }
     66% { transform: translateY(5px) rotate(-1deg); }
+  }
+
+  @keyframes subtle-drift {
+    0%, 100% { transform: translateX(0px) translateY(0px); }
+    25% { transform: translateX(5px) translateY(-3px); }
+    50% { transform: translateX(-3px) translateY(5px); }
+    75% { transform: translateX(3px) translateY(-2px); }
   }
 
   @keyframes pulse-glow {
@@ -425,15 +432,25 @@
 
   /* Specialty-specific enhancements */
 
-  /* Pediatrics playful animations */
+  /* Pediatrics playful animations - controlled and performance-friendly */
   .pediatrics-bounce {
-    animation: pediatrics-bounce 2s ease-in-out infinite;
+    animation: gentle-bounce 3s ease-in-out infinite;
   }
 
-  @keyframes pediatrics-bounce {
+  @keyframes gentle-bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-3px); }
+  }
+
+  /* Controlled bounce for playful elements */
+  .controlled-bounce {
+    animation: controlled-bounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes controlled-bounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
   }
 
   /* Gynecology elegant transitions */
@@ -498,6 +515,50 @@
   .text-classic {
     font-weight: 500;
     letter-spacing: normal;
+  }
+
+  /* Fix for playful theme layout issues */
+  .hero-playful {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Ensure sections are visible and properly spaced */
+  section {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    overflow: visible;
+  }
+
+  /* Prevent animation overflow issues */
+  .hero-playful::before {
+    z-index: -1;
+  }
+
+  /* Performance optimization for animations */
+  .controlled-bounce,
+  .gentle-bounce,
+  .pediatrics-bounce {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .controlled-bounce,
+    .gentle-bounce,
+    .pediatrics-bounce,
+    .hero-float,
+    .animate-bounce,
+    .animate-pulse {
+      animation: none !important;
+    }
+
+    .hero-playful::before {
+      animation: none !important;
+    }
   }
 
   /* Gradient Text */
